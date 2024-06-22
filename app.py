@@ -6,12 +6,13 @@ app = Flask(__name__)
 def trial():
   data = request.get_json()
   name = data["user_id"]
+  req = "Hi, " + name
   return{"blocks": [
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "Hi, " + name
+        "text": req
       }
     }]}, 200
 
