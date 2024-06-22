@@ -9,7 +9,8 @@ def trial():
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "*It's 80 degrees right now.*"
+        "text": ''' Please check if your question is answered in https://hackclub.slack.com/canvas/C077TSWKER0
+        If not please post your question'''
       }
     }]}, 200
 
