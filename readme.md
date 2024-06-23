@@ -1,6 +1,6 @@
-# Funky Project Generator
+# Project Idea Generator
 
-This Flask application generates funky, simple project ideas using OpenAI's GPT-3.5-turbo model. The app is designed to respond to POST requests, send a request to the OpenAI API, and return a unique project idea.
+This Flask application generates unique, simple project ideas using OpenAI's GPT-3.5-turbo model. The app is designed to respond to POST requests, send a request to the OpenAI API, and return a unique project idea.
 
 ## Table of Contents
 
