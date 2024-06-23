@@ -19,7 +19,16 @@ data = {
     ]
 }
 
-def send(rurl):
+#def send(rurl):
+    
+
+
+app = Flask(__name__)
+
+@app.post("/api/try")
+def trial():
+    sendurl = request.form.get("response_url")
+    #send(sendurl)
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
     rtext = rdata['choices'][0]['message']['content']
@@ -31,22 +40,14 @@ def send(rurl):
         "text": rtext
       }
     }]}
-    requests.post(rurl, json=rsend)
-
-
-app = Flask(__name__)
-
-@app.post("/api/try")
-def trial():
-    sendurl = request.form.get("response_url")
-    send(sendurl)
+    #requests.post(sendurl, json=rsend)
     
     return {"blocks": [
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "..."
+        "text": rsend
       }
     }]}
 
