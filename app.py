@@ -30,7 +30,7 @@ def trial():
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": rdata.choices[0].message.content
+        "text": rdata[choices][0]["message"][content]
       }
     }]}, 200
 
