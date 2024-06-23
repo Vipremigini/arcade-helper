@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, status
 import threading
 import requests
 
@@ -39,12 +39,5 @@ def trial():
     thread = threading.Thread(target=reply(request.form.get("response_url")))
     thread.start()
 
-    return {"blocks": [
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "hii"
-      }
-    }]}, 200
+    return status.HTTP_200_OK
 
