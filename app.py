@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.post("/api/try")
 def trial():
   data = request.get_json()
+  print(data)
   name = data["user_id"]
   req = "Hi, " + name
   return{"blocks": [
