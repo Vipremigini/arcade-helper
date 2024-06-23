@@ -24,12 +24,13 @@ app = Flask(__name__)
 @app.post("/api/try")
 def trial():
   response = requests.post(url, headers=headers, json=data)
+    rdata = response.json()
   return{"blocks": [
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": response.choices[0].message.content
+        "text": rdata.choices[0].message.content
       }
     }]}, 200
 
