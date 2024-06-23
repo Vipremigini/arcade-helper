@@ -1,4 +1,4 @@
-from flask import Flask, request, status
+from flask import Flask, request
 import threading
 import requests
 from flask_api import status
