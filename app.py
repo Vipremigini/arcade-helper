@@ -18,11 +18,7 @@ data = {
     ]
 }
 
-app = Flask(__name__)
-
-@app.post("/api/try")
-def trial():
-    sendurl = request.form.get("response_url")
+def send(rurl):
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
     rtext = rdata['choices'][0]['message']['content']
@@ -35,6 +31,14 @@ def trial():
       }
     }]}
     requests.post(rurl, json=rsend)
+
+
+app = Flask(__name__)
+
+@app.post("/api/try")
+def trial():
+    sendurl = request.form.get("response_url")
+    send(sendurl)
     
     return {"blocks": [
     {
