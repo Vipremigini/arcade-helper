@@ -1,7 +1,7 @@
 from flask import Flask, request
 import cohere
 
-bot = cohere.Client("SEsfFwtT9DS4u1tOEDB7xBgr4qCsQdd0js2VGLjf")
+bot = cohere.Client("VNPtolkc0NSINvIbVcKc3cmn9SMp2X4OzZjUVMZL")
 
 app = Flask(__name__)
 
