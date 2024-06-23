@@ -6,9 +6,7 @@ from openai import OpenAI
 bot = cohere.Client("VNPtolkc0NSINvIbVcKc3cmn9SMp2X4OzZjUVMZL")
 client = OpenAI(
     # This is the default and can be omitted
-    api_key= "A0SO2U3QRRBRAQWO0CBUFSJK00VHCQGBP30BL18U834PZ4FACE00W60VFJVD8EDW"),
-)
-
+    api_key= "A0SO2U3QRRBRAQWO0CBUFSJK00VHCQGBP30BL18U834PZ4FACE00W60VFJVD8EDW")
 
 app = Flask(__name__)
 
