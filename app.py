@@ -1,6 +1,7 @@
 from flask import Flask, request
 import threading
 import requests
+import time
 
 url = 'https://jamsapi.hackclub.dev/openai/chat/completions'
 
@@ -30,6 +31,7 @@ def send(rurl):
         "text": rtext
       }
     }]}
+    time.sleep(1)
     requests.post(rurl, json=rsend)
 
 
