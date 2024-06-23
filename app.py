@@ -1,6 +1,8 @@
 from flask import Flask, request, status
 import threading
 import requests
+from flask_api import status
+
 
 url = 'https://jamsapi.hackclub.dev/openai/chat/completions'
 
