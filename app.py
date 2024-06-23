@@ -18,10 +18,19 @@ data = {
     ]
 }
 
-def reply(url):
+def reply(rurl):
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
     rtext = rdata['choices'][0]['message']['content']
+    send = {"blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "hi"
+      }
+    }]}
+    requests.post(rurl, json=todo)
 
 app = Flask(__name__)
 
