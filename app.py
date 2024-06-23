@@ -47,7 +47,7 @@ def trial():
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": rsend
+        "text": rdata
       }
     }]}
 
