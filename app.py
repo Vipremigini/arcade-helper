@@ -6,7 +6,7 @@ url = 'https://jamsapi.hackclub.dev/openai/chat/completions'
 
 headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'A0SO2U3QRRBRAQWO0CBUFSJK00VHCQGBP30BL18U834PZ4FACE00W60VFJVD8EDW'
+    'Authorization': 'Bearer A0SO2U3QRRBRAQWO0CBUFSJK00VHCQGBP30BL18U834PZ4FACE00W60VFJVD8EDW'
 }
 data = {
     'model': 'gpt-3.5-turbo',
