@@ -9,7 +9,7 @@ app = Flask(__name__)
 def trial():
     murl = "https://ah-helper.onrender.com/api/send"
     sendurl = request.form.get("response_url")
-    send = { "rurl" = sendurl }
+    send = { "rurl" : sendurl }
     requests.post(murl, json=send)
     return {"blocks": [
     {
