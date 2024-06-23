@@ -25,7 +25,7 @@ app = Flask(__name__)
 def trial():
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
-    return 200, {"blocks": [
+    return {"blocks": [
     {
       "type": "section",
       "text": {
