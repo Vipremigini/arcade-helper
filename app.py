@@ -45,7 +45,7 @@ def trial():
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": sendurl
+        "text": "wait"
       }
     }]}
 
