@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.post("/api/try")
 def trial():
-  name = request.form.get("user_id")
+  name = request.form.get("user_name")
   req = "Hi, " + name
   return{"blocks": [
     {
