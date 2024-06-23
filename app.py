@@ -22,23 +22,7 @@ app = Flask(__name__)
 
 @app.post("/api/try")
 def trial():
-    murl = "https://arcade-helper.onrender.com/api/send"
     sendurl = request.form.get("response_url")
-    send = { "rurl" : sendurl }
-    requests.post(murl, json=send)
-    return {"blocks": [
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": sendurl
-      }
-    }]}
-
-
-@app.post("/api/send")
-def reply():
-    rurl = request.form.get("rurl")
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
     rtext = rdata['choices'][0]['message']['content']
@@ -51,3 +35,13 @@ def reply():
       }
     }]}
     requests.post(rurl, json=rsend)
+    
+    return {"blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": sendurl
+      }
+    }]}
+
