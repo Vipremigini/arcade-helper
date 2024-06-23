@@ -23,6 +23,7 @@ app = Flask(__name__)
 
 @app.post("/api/try")
 def trial():
+    yield 200
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
     return{"blocks": [
