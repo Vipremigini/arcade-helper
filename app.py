@@ -19,15 +19,15 @@ data = {
 }
 
 def reply(rurl):
-    #response = requests.post(url, headers=headers, json=data)
-    #rdata = response.json()
-    #rtext = rdata['choices'][0]['message']['content']
+    response = requests.post(url, headers=headers, json=data)
+    rdata = response.json()
+    rtext = rdata['choices'][0]['message']['content']
     send = {"blocks": [
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "hi"
+        "text": rtext
       }
     }]}
     requests.post(rurl, json=send)
