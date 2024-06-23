@@ -25,8 +25,7 @@ def trial():
     murl = "https://arcade-helper.onrender.com/api/send"
     sendurl = request.form.get("response_url")
     send = { "rurl" : sendurl }
-    thread = threading.Thread(target= requests.post(murl, json=send))
-    thread.start()
+    requests.post(murl, json=send))
     return {"blocks": [
     {
       "type": "section",
