@@ -31,7 +31,6 @@ def send(rurl):
         "text": rtext
       }
     }]}
-    time.sleep(1)
     requests.post(rurl, json=rsend)
 
 
@@ -47,7 +46,7 @@ def trial():
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "wait"
+        "text": "..."
       }
     }]}
 
