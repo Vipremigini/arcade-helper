@@ -9,7 +9,7 @@ app = Flask(__name__)
 def trial():
   response = bot.chat(
     preamble = '''Purpose:
-To provide high school students with unique, quirky, crazy, and one-line project ideas in the fields of electronics, coding, web development, app development, and robotics. It must generate new idea everytime, no old ideas allowed
+To provide high school students with unique, quirky, crazy, and one-line project ideas in the fields of electronics, coding, web development, app development, and robotics. It must generate new idea everytime, no old ideas allowed. Each new idea must be from any one of the fields.
 Input:
 A user's message requesting a project idea (e.g., "Idea needed, generate it").
 Output:
