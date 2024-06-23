@@ -43,7 +43,7 @@ def reply():
     response = requests.post(url, headers=headers, json=data)
     rdata = response.json()
     rtext = rdata['choices'][0]['message']['content']
-    send = {"blocks": [
+    rsend = {"blocks": [
     {
       "type": "section",
       "text": {
@@ -51,4 +51,4 @@ def reply():
         "text": rtext
       }
     }]}
-    requests.post(rurl, json=send)
+    requests.post(rurl, json=rsend)
