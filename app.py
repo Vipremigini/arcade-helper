@@ -10,7 +10,7 @@ def trial():
     murl = "https://ah-helper.onrender.com/api/send"
     sendurl = request.form.get("response_url")
     send = { "rurl" = sendurl }
-    requests.post(, json=send)
+    requests.post(murl, json=send)
     return {"blocks": [
     {
       "type": "section",
