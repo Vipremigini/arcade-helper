@@ -1,5 +1,5 @@
 from flask import Flask, request
-import cohere
+import threading
 import requests
 
 url = 'https://jamsapi.hackclub.dev/openai/chat/completions'
@@ -18,19 +18,23 @@ data = {
     ]
 }
 
+def reply(url):
+    response = requests.post(url, headers=headers, json=data)
+    rdata = response.json()
+    rtext = rdata['choices'][0]['message']['content']
 
 app = Flask(__name__)
 
 @app.post("/api/try")
 def trial():
-    response = requests.post(url, headers=headers, json=data)
-    rdata = response.json()
+    thread = threading.Thread(target=reply(request["response_url"]))
+    thread.start()
     return {"blocks": [
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": rdata['choices'][0]['message']['content']
+        "text": "Finding an idea for you from the depth"
       }
     }]}
 
