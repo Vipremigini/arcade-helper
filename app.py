@@ -20,7 +20,6 @@ Sample Outputs:
 "Build a hat with LEDs that light up based on your brainwaves."
 "Write a Python script that tweets random, philosophical questions to confuse the internet."
 "Create a website that shows a different meme every hour, curated by an AI."
-"Develop an app that translates your cat's meows into Shakespearean English."
 "Make a robot that delivers snacks and tells cheesy jokes while doing it."
 
 whenever i ask for it, generate a idea''',
