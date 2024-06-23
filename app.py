@@ -36,14 +36,15 @@ app = Flask(__name__)
 
 @app.post("/api/try")
 def trial():
-    thread = threading.Thread(target=reply(request["response_url"]))
-    thread.start()
+    #thread = threading.Thread(target=reply(request["response_url"]))
+    #thread.start()
+    tt = "hi" + request["response_url"]
     return {"blocks": [
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "Finding an idea for you from the depth"
+        "text": text
       }
     }]}
 
