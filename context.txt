@@ -1,0 +1,5 @@
+Disclaimer: This is my first time building a Slack Bot, first time building an API, first time working with and using an API. I have learned a lot during these hours and am implementing stuff along the way. 
+I'm building and implementing the bot API and hosting it over multiple hosting services over the course of this project. These services that I used were free but buggy. About half of the session were spent in
+the server building the app and deploying it. And every time some bug or another kept popping up, leading me to make small changes to the code and debugging it and again building and deploying it on the server. 
+This continued over and over again. This is why you might see only small changes in the code between commits, and sometimes I had to even revert back to older code and work up from there. 
+Plss don't reject these sessions, i have never worked this hard and long on a single stretch for any other project:face_holding_back_tears:
